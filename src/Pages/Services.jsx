@@ -35,7 +35,7 @@ const Services = () => {
       component="section"
       sx={{
         py: { xs: 8, md: 12 },
-        background: `linear-gradient(135deg, ${theme.palette.background.default} 0%, ${theme.palette.background.paper} 100%)`,
+        // background: `linear-gradient(135deg, ${theme.palette.background.default} 0%, ${theme.palette.background.paper} 100%)`,
       }}
     >
       <Container maxWidth="lg">
