@@ -39,6 +39,26 @@ const SocialIcon = styled(Link)(({ theme }) => ({
 }));
 const Home = () => {
   const theme = useTheme();
+  const handleDownloadAndOpen = (fileUrl) => {  
+    // Create a link element  
+    const link = document.createElement('a');  
+    link.href = fileUrl;  
+  
+    // Set the download attribute  
+    link.setAttribute('download', fileUrl.split('/').pop());  
+  
+    // Append to the body (necessary for Firefox)  
+    document.body.appendChild(link);  
+    
+    // Open the PDF in a new tab  
+    window.open(fileUrl, '_blank');  
+  
+    // Simulate click to trigger download  
+    link.click();  
+    
+    // Clean up and remove the link  
+    document.body.removeChild(link);  
+  };
 
   return (
     <Box
@@ -127,13 +147,31 @@ const Home = () => {
                               <GitHub />
                             </SocialIcon>
                           </SocialContainer>
-              <Button
+                          <Button  
+  variant="contained"  
+  size="large"  
+  onClick={() => handleDownloadAndOpen("/Anjalii.pdf")}  
+  startIcon={<DownloadRoundedIcon />}  
+  sx={{  
+    py: 1.5,  
+    px: 4,  
+    bgcolor: theme.palette.primary.main,  
+    '&:hover': {  
+      bgcolor: theme.palette.primary.dark,  
+      transform: 'translateY(-2px)',  
+    },  
+    transition: 'all 0.3s ease',  
+  }}  
+>  
+  Download CV  
+</Button>
+              {/* <Button
                 variant="contained"
                 size="large"
                 component="a"
                 download
                 href="/Anjalii.pdf"
-                // target="_blank"
+                target="_blank"
                 startIcon={<DownloadRoundedIcon />}
                 sx={{
                   py: 1.5,
@@ -147,7 +185,7 @@ const Home = () => {
                 }}
               >
                 Download CV
-              </Button>
+              </Button> */}
               
             </Stack>
           </Box>
