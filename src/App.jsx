@@ -19,9 +19,10 @@ const MainLayout = () => {
       <Home />  
       <About />  
       <Skill />  
+      <Projects />
       <Services />  
-      <Projects /> 
-      {/* <GitHubStats />   */}
+       
+      <GitHubStats />  
       <Footer />  
        
     </Box>  
