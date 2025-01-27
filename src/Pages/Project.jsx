@@ -23,8 +23,9 @@ const projects = [
   {  
     id: 1,  
     title: "Ecommerce Website",  
+    subtitle:"ongoing....",
     image: eccomerse,  
-    description: "This project is a fully responsive eCommerce website designed to offer users a seamless shopping experience. With features that allow for easy filtering and sorting of products, it ensures that customers can quickly find what they’re looking for. Built using HTML and CSS, the site features a clean and intuitive interface, making navigation effortless across all devices.",  
+    description: "This project is a fully responsive eCommerce website designed to offer users a seamless shopping experience. With features that allow for easy filtering and sorting of products, it ensures that customers can quickly find what they’re looking for. Built using HTML and CSS,  making navigation effortless across all devices.",  
     liveLink: "https://martlite.netlify.app/",  
     codeLink: "https://github.com/Anjaliicode/EcommerceProject",  
     technologies: ["HTML", "CSS", "JavaScript","ReactJs","Mui"]  
@@ -163,13 +164,17 @@ const ProjectSection = () => {
                     sx={{ fontWeight: 'bold', mb: 2 }}  
                   >  
                     {project.title}  
+                    
                   </Typography>  
+                  <Typography>{project.subtitle}</Typography>
                   <Typography   
                     variant="body1"   
                     color="text.secondary"   
                     sx={{ mb: 3 }}  
                   >  
-                    {project.description}  
+                    {project.description} 
+                     
+                    
                   </Typography>  
 
                   {/* Render Technology Chips */}  
@@ -204,7 +209,10 @@ const ProjectSection = () => {
             </motion.div>  
           ))}  
         </Box>  
-      </Container>  
+      </Container> 
+      <Box display="flex" justifyContent="center" sx={{ mt:4 }}>  
+  <Button variant="contained">See More Projects</Button>  
+</Box> 
     </Box>  
   );  
 };  
