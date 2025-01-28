@@ -70,7 +70,7 @@ const AllProjects = () => {
             textAlign: "center",
           }}
         >
-          MY All PROJECTS
+          See More projects
         </Typography>
       </Box>
 
