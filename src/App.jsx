@@ -12,7 +12,7 @@ import Services from './Pages/Services';
 import Projects from './Pages/Project';  
 import Footer from './Pages/Footer';  
 import GitHubStats from './Pages/Github';   
-import AllProjects from './Pages/AllProjects';
+// import AllProjects from './Pages/AllProjects';
 
 const MainLayout = () => {  
   return (  
@@ -25,7 +25,7 @@ const MainLayout = () => {
        
       <GitHubStats />  
       <Footer /> 
-      <AllProjects/> 
+      {/* <AllProjects/>  */}
        
     </Box>  
   );  
