@@ -158,7 +158,7 @@ const Home = () => {
               <Button
                 variant="contained"
                 size="large"
-                onClick={() => handleDownloadAndOpen("/Anjalii.pdf")}
+                onClick={() => handleDownloadAndOpen("/public/Anjali-Saini-Resume.pdf")}
                 startIcon={<DownloadRoundedIcon />}
                 sx={{
                   py: 1.5,
