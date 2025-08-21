@@ -198,7 +198,7 @@ const Home = () => {
               sx={{
                 width: { xs: "280px", md: "400px" },
                 height: "auto",
-                borderRadius: "24px",
+                borderRadius: "50%",
                 position: "relative",
                 zIndex: 1,
                 transition: "transform 0.5s ease",
